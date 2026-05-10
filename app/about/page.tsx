@@ -148,6 +148,115 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* AI 교육개발 프레임워크 */}
+      <section className="py-24">
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight mb-4">AI 교육개발 프레임워크</h2>
+            <p className="text-lg text-muted-foreground break-keep max-w-2xl mx-auto">
+              상상우리 AI 교육콘텐츠연구소가 자체 개발한 맞춤형 과정 설계 방법론입니다.
+              대상의 특성과 AI 도구를 체계적으로 분석하여 최적의 교육과정을 도출합니다.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {[
+              {
+                step: "01",
+                title: "학습자 분석",
+                desc: "CIG16 진단 도구로 시니어 학습자의 디지털 성향, 현업 경력, 학습 목표를 정밀 분석합니다.",
+              },
+              {
+                step: "02",
+                title: "AI 툴 매핑",
+                desc: "ChatGPT, 미드저니, Make 등 과업에 최적화된 AI 도구를 단독 또는 복합 적용합니다.",
+              },
+              {
+                step: "03",
+                title: "마이크로러닝 설계",
+                desc: "3~5분 단위의 세분화된 모듈로 시니어의 심리적 부담을 줄이고 현장 틈새 학습을 지원합니다.",
+              },
+              {
+                step: "04",
+                title: "현장 피드백 반영",
+                desc: "파견 강사 및 컨설턴트의 현장 피드백을 LMS 데이터와 결합하여 과정을 지속 개선합니다.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="relative flex flex-col p-6 rounded-3xl border border-border/60 bg-card group hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="text-5xl font-extrabold text-primary/10 mb-4 group-hover:text-primary/20 transition-colors">
+                  {item.step}
+                </div>
+                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed break-keep">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 파트너십 및 주요 연혁 */}
+      <section className="py-24 bg-secondary/20 border-y border-border/40">
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight mb-4">파트너십 및 주요 연혁</h2>
+            <p className="text-lg text-muted-foreground break-keep max-w-2xl mx-auto">
+              정부 부처, 지자체, 공공기관과의 협업으로 쌓아온 검증된 신뢰의 역사입니다.
+            </p>
+          </div>
+
+          <div className="relative border-l-2 border-primary/20 pl-8 ml-4 space-y-10">
+            {[
+              {
+                year: "2026",
+                month: "05",
+                event: "상상우리 AI 플랫폼 1.0 정식 오픈",
+                detail: "전문가 파견 매칭, AI 캠퍼스(LMS), 솔루션 에이전시 통합 운영 시작",
+              },
+              {
+                year: "2026",
+                month: "01",
+                event: "서울디지털동행플라자 강동·동대문·도봉 센터 운영 위탁",
+                detail: "3개 센터 총 200여 개 교육 과정, 누적 방문 어르신 8만 명 달성",
+              },
+              {
+                year: "2025",
+                month: "09",
+                event: "강남구 통합 일자리 사업 — 디지털 리터러시 매니저 양성",
+                detail: "강남구 소재 소상공인 50개 업체 대상 AI 활용 교육 성료",
+              },
+              {
+                year: "2025",
+                month: "04",
+                event: "은평구 AI 딥러닝 강사 양성과정 운영",
+                detail: "서울 서북권 최초 시니어 전문 AI 강사 양성 프로그램 개설",
+              },
+              {
+                year: "2024",
+                month: "11",
+                event: "CIG16 시니어 진로 진단 도구 개발 완료",
+                detail: "중장년 인생 2막 진로 성향을 16가지 유형으로 분석하는 자체 솔루션 출시",
+              },
+            ].map((item) => (
+              <div key={`${item.year}${item.month}`} className="relative">
+                <div className="absolute -left-[42px] flex items-center justify-center size-5 rounded-full bg-primary border-2 border-background" />
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 mb-1">
+                  <span className="text-sm font-bold text-primary">
+                    {item.year}. {item.month}
+                  </span>
+                  <h3 className="font-semibold text-foreground break-keep">{item.event}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground break-keep">{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-card border-t border-border/40">
         <div className="container mx-auto px-4 text-center max-w-3xl">

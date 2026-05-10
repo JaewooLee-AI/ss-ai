@@ -4,8 +4,8 @@ import Link from "next/link";
 const mockPosts = [
   {
     id: "post-1",
-    author: "Jane Doe",
-    avatar: "J",
+    author: "홍미영",
+    avatar: "홍",
     title: "데이터 분석 프롬프트는 어떻게 구성하시나요?",
     preview: "영업 CSV를 분석하려고 ChatGPT를 사용 중인데 계속 숫자를 지어내네요. 팁 있으신가요?",
     likes: 12,
@@ -15,8 +15,8 @@ const mockPosts = [
   },
   {
     id: "post-2",
-    author: "Sanghoon Lee",
-    avatar: "S",
+    author: "이상훈",
+    avatar: "이",
     title: "미드저니 v6는 광고 크리에이티브의 게임 체인저입니다.",
     preview: "최근 성공 사례를 공유합니다. 새 v6 모델을 사용하여 에이전시 크리에이티브 비용을 40% 절감했습니다...",
     likes: 34,

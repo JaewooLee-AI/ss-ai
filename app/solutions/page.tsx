@@ -1,5 +1,5 @@
 import { QuoteForm } from "@/components/solutions/quote-form";
-import { CheckCircle2, Zap, Cog, Building2 } from "lucide-react";
+import { CheckCircle2, Zap, Cog, Building2, Globe, Bot, BarChart3, Megaphone } from "lucide-react";
 
 const packages = [
   {
@@ -84,6 +84,58 @@ export default function SolutionsPage() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* 에이전시 포트폴리오 */}
+      <div className="mb-24">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl font-bold tracking-tight mb-3">에이전시 서비스 포트폴리오</h2>
+          <p className="text-muted-foreground break-keep max-w-xl mx-auto">
+            시니어 AI 컨설턴트들이 직접 실행하는 대행 서비스입니다. 컨설팅에서 그치지 않고 실질적인 디지털 결과물을 만들어 드립니다.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            {
+              icon: <Globe className="size-5 text-primary" />,
+              title: "모바일 홈페이지 제작",
+              desc: "네이버 모두(modoo!) 기반 소상공인 맞춤 모바일 홈페이지 제작 및 SEO 최적화 대행",
+              badge: "Standard / Premium",
+            },
+            {
+              icon: <Bot className="size-5 text-primary" />,
+              title: "AI 챗봇 통합 구축",
+              desc: "고객 응대 자동화를 위한 카카오톡·홈페이지 연동 AI 챗봇 세팅 및 운영 가이드 제공",
+              badge: "맞춤 견적",
+            },
+            {
+              icon: <Megaphone className="size-5 text-primary" />,
+              title: "디지털 마케팅 콘텐츠 대행",
+              desc: "AI 기반 SNS 카드뉴스·쇼츠·광고 카피라이팅 월정액 제작 대행 서비스",
+              badge: "월 정기 계약",
+            },
+            {
+              icon: <BarChart3 className="size-5 text-primary" />,
+              title: "상권 분석 & 데이터 인사이트",
+              desc: "공공 데이터 및 AI 분석 툴을 활용한 입지·경쟁·매출 데이터 인사이트 리포트 제공",
+              badge: "프로젝트 단위",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col p-6 rounded-3xl border border-border/60 bg-card hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="p-3 bg-primary/10 rounded-2xl w-fit mb-4">{item.icon}</div>
+              <h3 className="font-bold text-base mb-2 break-keep">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed break-keep flex-1">
+                {item.desc}
+              </p>
+              <span className="mt-4 inline-block text-[11px] font-bold px-2.5 py-1 rounded-full bg-secondary text-muted-foreground">
+                {item.badge}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-secondary/30 rounded-3xl p-6 md:p-12 border border-border/50 overflow-hidden relative">
