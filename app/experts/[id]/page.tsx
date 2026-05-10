@@ -6,12 +6,12 @@ async function getExpert(id: string) {
   // In a real app, query the database
   return {
     id,
-    name: "Dr. Jiwon Kim",
-    title: "Senior AI Strategist",
-    region: "Seoul",
+    name: "김지원 박사",
+    title: "시니어 AI 전략가",
+    region: "서울",
     experienceYears: 15,
-    bio: "Former executive with 15+ years of experience in leading digital transformation. Specializes in integrating LLMs into enterprise workflows.",
-    skills: ["AI Strategy", "Machine Learning", "Workflow Automation"],
+    bio: "디지털 트랜스포메이션을 15년 이상 이끌어온 전직 임원 출신. 기업 워크플로우에 LLM을 통합하는 분야를 전문으로 합니다.",
+    skills: ["AI 전략", "머신러닝", "워크플로우 자동화"],
     verified: true,
   };
 }
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     title: `${expert.name} - ${expert.title}`,
     description: expert.bio,
     openGraph: {
-      title: `${expert.name} | Expert at Sangsangwoori`,
+      title: `${expert.name} | 상상우리 AI 전문가`,
       description: expert.bio,
       type: "profile",
     },
@@ -78,17 +78,17 @@ export default async function ExpertDetailPage({ params }: { params: Promise<{ i
               <MapPin className="size-4" /> {expert.region}
             </span>
             <span className="flex items-center gap-1.5 bg-background/50 px-3 py-1 rounded-full border border-border/50">
-              <Briefcase className="size-4" /> {expert.experienceYears} Years Experience
+              <Briefcase className="size-4" /> {expert.experienceYears}년 경력
             </span>
           </div>
 
           <div className="prose prose-sm dark:prose-invert max-w-none mb-8">
-            <h3 className="text-lg font-semibold text-foreground">About</h3>
+            <h3 className="text-lg font-semibold text-foreground">소개</h3>
             <p className="text-muted-foreground leading-relaxed">{expert.bio}</p>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold mb-3">Expertise & Skills</h3>
+            <h3 className="text-sm font-semibold mb-3">전문 분야 및 스킬</h3>
             <div className="flex flex-wrap gap-2">
               {expert.skills.map((skill) => (
                 <span key={skill} className="bg-secondary/50 text-secondary-foreground text-xs font-medium px-2.5 py-1 rounded-md border border-border/50">

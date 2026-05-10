@@ -36,7 +36,7 @@ export function ExpertCard({ expert }: { expert: ExpertProps }) {
               <div className="flex items-center gap-2">
                 <h3 className="font-semibold text-lg text-foreground tracking-tight">{expert.name}</h3>
                 {expert.verified && (
-                  <BadgeCheck className="size-4 text-primary" aria-label="Verified" />
+                  <BadgeCheck className="size-4 text-primary" aria-label="인증됨" />
                 )}
               </div>
               <p className="text-sm font-medium text-muted-foreground">{expert.title}</p>
@@ -46,7 +46,7 @@ export function ExpertCard({ expert }: { expert: ExpertProps }) {
             <span className="flex items-center gap-1 font-medium">
               <MapPin className="size-3" /> {expert.region}
             </span>
-            <span className="mt-1">{expert.experienceYears}y exp</span>
+            <span className="mt-1">{expert.experienceYears}년 경력</span>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ export function ExpertCard({ expert }: { expert: ExpertProps }) {
 
         <div className="relative z-10 mt-6 flex flex-wrap gap-2">
           <span className="flex items-center gap-1 rounded-md bg-secondary/50 px-2 py-1 text-xs font-medium text-secondary-foreground">
-            <Wrench className="size-3" /> Tools
+            <Wrench className="size-3" /> 사용 도구
           </span>
           {expert.tools.map((tool) => (
             <span key={tool} className="rounded-md border border-border/50 px-2 py-1 text-xs text-muted-foreground">

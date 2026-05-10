@@ -40,7 +40,7 @@ export function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between border-t border-border/40 pt-8 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Sangsangwoori. All rights reserved.
+            &copy; {new Date().getFullYear()} 상상우리. 모든 권리 보유.
           </p>
           <div className="mt-4 flex space-x-4 sm:mt-0 text-xs text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition-colors">개인정보처리방침</Link>
